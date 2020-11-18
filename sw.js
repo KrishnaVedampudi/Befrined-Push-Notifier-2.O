@@ -42,7 +42,7 @@ OneSignal.setSubscription(true);
                   .then(json => {
                      console.log(json);
                   });
-                }););         
+                });      
       OneSignal.push(["addListenerForNotificationOpened", function(event) {       
         if (event.action === 'Yes') {       
           ThunkableWebviewerExtension.postMessage(ty);          
