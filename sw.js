@@ -13,14 +13,8 @@ OneSignal.push(function() {
     }
   });
   });
-OneSignal.setSubscription(true);
-function sendMessage()
-  {     
-        ThunkableWebviewerExtension.receiveMessage(function(message) {             
-          if(message == null){
-            console.log(message);
-          }else{  
-            OneSignal.getUserId(function() {                    
+OneSignal.setSubscription(true);    
+        ThunkableWebviewerExtension.receiveMessage(function(message) {                                               
               web_buttons=[
                {
                "id":"Yes",
@@ -48,7 +42,7 @@ function sendMessage()
                   .then(json => {
                      console.log(json);
                   });
-                });}});}         
+                }););         
       OneSignal.push(["addListenerForNotificationOpened", function(event) {       
         if (event.action === 'Yes') {       
           ThunkableWebviewerExtension.postMessage(ty);          
