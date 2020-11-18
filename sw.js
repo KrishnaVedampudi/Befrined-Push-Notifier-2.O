@@ -16,8 +16,7 @@ OneSignal.push(function() {
 OneSignal.setSubscription(true);
 function sendMessage()
   {     
-        ThunkableWebviewerExtension.receiveMessage(function(message) {      
-          x12 = 1;
+        ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){
             console.log(message);
           }else{  
