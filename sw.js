@@ -10,16 +10,15 @@ OneSignal.push(function() {
       "title" :"A message from befriend O'bot",
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
      "url": "https://www.google.com" 
-    }
-  });
-  });
+    }});});
 OneSignal.setSubscription(true);
 function sendMessage()
   {     
         ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);
-          }else{                                                                       
+          }else{
+                                                                                   
               web_buttons=[
                {
                "id":"Yes",
@@ -45,12 +44,11 @@ function sendMessage()
                          'Authorization': 'Basic YzE0ZDk1NzYtYTExNS00YmMzLTk4ZWItMWFlOTNiNzA5NTJm'}
                  }).then(response => response.json())
                   .then(json => {
-                     console.log(json);
-                  });
-  }});}                                     
-      OneSignal.push(["addListenerForNotificationOpened", function(event) {       
-        if (event.action === 'Yes') {       
-          ThunkableWebviewerExtension.postMessage(ty);          
-        } else if (event.action === 'No') {                 
-          alert("Thanks for your immediate reply");                
-        }}]);
+                     ThunkableWebviewerExtension.postMessage(json);
+                });}
+              OneSignal.push(["addListenerForNotificationOpened", function(event) {       
+                if (event.action === 'Yes') {       
+                  ThunkableWebviewerExtension.postMessage(message);          
+                } else if (event.action === 'No') {                 
+                  alert("Thanks for your immediate reply");                
+                }}]);});}  
