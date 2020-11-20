@@ -11,9 +11,9 @@ OneSignal.push(function() {
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
      "url": "https://www.google.com" 
     }});});
-OneSignal.setSubscription(true);
 function sendMessage()
   {     
+    OneSignal.setSubscription(true);
         ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);
