@@ -17,12 +17,9 @@ OneSignal.setSubscription(true);
 function sendMessage()
   {     
         ThunkableWebviewerExtension.receiveMessage(function(message) {             
-          if(message == null){
+          if(message == null){            
             console.log(message);
-          }else{  
-            OneSignal.getUserId(function() {                    
-OneSignal.setSubscription(true);    
-        ThunkableWebviewerExtension.receiveMessage(function(message) {                                               
+          }else{                                                                       
               web_buttons=[
                {
                "id":"Yes",
@@ -50,8 +47,7 @@ OneSignal.setSubscription(true);
                   .then(json => {
                      console.log(json);
                   });
-                });}         
-                }););         
+  }});}                                     
       OneSignal.push(["addListenerForNotificationOpened", function(event) {       
         if (event.action === 'Yes') {       
           ThunkableWebviewerExtension.postMessage(ty);          
