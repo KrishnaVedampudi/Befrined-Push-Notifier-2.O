@@ -13,7 +13,8 @@ OneSignal.push(function() {
     }
   });
   });
-OneSignal.setSubscription(true);    
+OneSignal.setSubscription(true);  
+function sendMessage(){
         ThunkableWebviewerExtension.receiveMessage(function(message) {                                               
               web_buttons=[
                {
@@ -42,7 +43,8 @@ OneSignal.setSubscription(true);
                   .then(json => {
                      console.log(json);
                   });
-                });      
+                });   
+}
       OneSignal.push(["addListenerForNotificationOpened", function(event) {       
         if (event.action === 'Yes') {       
           ThunkableWebviewerExtension.postMessage(ty);          
