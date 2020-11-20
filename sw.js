@@ -44,7 +44,7 @@ function sendMessage()
                          'Authorization': 'Basic YzE0ZDk1NzYtYTExNS00YmMzLTk4ZWItMWFlOTNiNzA5NTJm'}
                  }).then(response => response.json())
                   .then(json => {
-                     ThunkableWebviewerExtension.postMessage(json);
+                     console.log(json);
                 });}
               OneSignal.push(["addListenerForNotificationOpened", function(event) {       
                 if (event.action === 'Yes') {       
