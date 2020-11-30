@@ -11,11 +11,14 @@ OneSignal.push(function() {
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
      "url": "https://www.google.com" 
     }});});
-function sendMessage()
-  {  
-    OneSignal.push(function() {
+function prompt()
+{
+  OneSignal.push(function() {
    OneSignal.showSlidedownPrompt(); 
-});
+  }); 
+}
+function sendMessage()
+{      
     OneSignal.setSubscription(true);
         ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
