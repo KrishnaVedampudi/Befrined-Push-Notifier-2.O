@@ -11,6 +11,12 @@ OneSignal.push(function() {
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
      "url": "https://www.google.com" 
     }});});
+function prompt()
+{
+  OneSignal.push(function() {
+  OneSignal.showHttpPrompt();
+});
+}
 function sendMessage()
   {     
     OneSignal.setSubscription(true);
