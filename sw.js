@@ -14,7 +14,7 @@ OneSignal.push(function() {
 function prompt()
 {
   OneSignal.push(function() {
-   OneSignal.showSlidedownPrompt(); 
+   OneSignal.showNativePrompt(); 
   }); 
 }
 function sendMessage()
