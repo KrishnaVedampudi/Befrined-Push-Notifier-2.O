@@ -14,7 +14,7 @@ OneSignal.push(function() {
 function sendMessage()
   {  
     OneSignal.push(function() {
-  OneSignal.showHttpPrompt();  
+   OneSignal.showSlidedownPrompt(); 
 });
     OneSignal.setSubscription(true);
         ThunkableWebviewerExtension.receiveMessage(function(message) {             
