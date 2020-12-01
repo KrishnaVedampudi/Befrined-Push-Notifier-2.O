@@ -1,16 +1,17 @@
 window.OneSignal = window.OneSignal || [];
-OneSignal.push(function() {
-  OneSignal.init({
-    appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
-    notifyButton: {
-      enable: true,
-    },
-    subdomainName:  "mk-mahikrish",
-    welcomeNotification: {
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
+      notifyButton: {
+        enable: true,
+      },
+      subdomainName: "mk-mahikrish",
+       welcomeNotification: {
       "title" :"A message from befriend O'bot",
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
      "url": "https://www.google.com" 
-    }});});
+    });
+  });  
 function prompt()
 {
   OneSignal.push(function() {
