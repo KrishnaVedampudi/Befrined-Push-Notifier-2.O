@@ -52,8 +52,8 @@ function prompt()
                       method: 'POST',
                      body: JSON.stringify(body),
                       headers: {               
-                         'Content-type': 'application/json; charset=UTF-8',
-                         'Authorization': 'Basic YzE0ZDk1NzYtYTExNS00YmMzLTk4ZWItMWFlOTNiNzA5NTJm'}
+                        'Content-type': 'application/json; charset=UTF-8'
+                      }
                  }).then(response => response.json())
                   .then(json => {
                      console.log(json);
