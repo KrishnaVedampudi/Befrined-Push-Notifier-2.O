@@ -1,3 +1,4 @@
+message = "";
 window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
@@ -19,13 +20,16 @@ function prompt()
    OneSignal.showNativePrompt(); 
   }); 
 }
-function sendMessage()
-{      
-    OneSignal.setSubscription(true);
-        ThunkableWebviewerExtension.receiveMessage(function(message) {             
+ ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);
           }else{
+          sendMessage();
+          }
+        });
+   function sendMessage()
+{      
+    OneSignal.setSubscription(true);      
                                                                                    
               web_buttons=[
                {
@@ -59,4 +63,4 @@ function sendMessage()
                   ThunkableWebviewerExtension.postMessage(message);          
                 } else if (event.action === 'No') {                 
                   alert("Thanks for your immediate reply");                
-                }}]);});}  
+                }}]); 
