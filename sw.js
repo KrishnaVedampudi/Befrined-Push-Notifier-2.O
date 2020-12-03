@@ -52,7 +52,7 @@ function prompt()
                       method: 'POST',
                      body: JSON.stringify(body),
                       headers: {               
-                        'Content-type': 'application/json; charset=UTF-8'
+                        'Content-type': 'application/json; charset=utf-8'
                       }
                  }).then(response => response.json())
                   .then(json => {
