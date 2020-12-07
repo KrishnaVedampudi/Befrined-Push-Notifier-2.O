@@ -44,7 +44,7 @@ function prompt()
               const body = {    
                "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
                "include_player_ids":[msg],
-               "headings" : "A job request!",
+               "headings" : {"en": "A job request!"},
                "data": {"foo": "bar"},           
                "contents": {"en": "Hello, someone is waiting for you!!!! If you want to aceept the job request, click on I am willing"},
                "web_buttons": web_buttons
