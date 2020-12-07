@@ -1,4 +1,4 @@
-msg = "";
+noti = "";
 window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
@@ -24,13 +24,13 @@ function prompt()
           if(message == null){            
             console.log(message);            
           }else{
-            msg = message;
+            noti = message;
           sendMessage();           
           }
         });
    function sendMessage()
 {      
-  console.log(msg);
+  console.log(noti);
     OneSignal.setSubscription(true);      
                                                                                    
               web_buttons=[
@@ -44,7 +44,7 @@ function prompt()
                }]                 
               const body = {    
                "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
-               "include_player_ids":[msg],
+               "include_player_ids":[noti],
                "headings" : {"en": "A job request!"},
                "data": {"foo": "bar"},           
                "contents": {"en": "Hello, someone is waiting for you!!!! If you want to aceept the job request, click on I am willing"},
