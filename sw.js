@@ -63,7 +63,7 @@ function prompt()
                 });}
               OneSignal.push(["addListenerForNotificationOpened", function(event) {       
                 if (event.action === 'Yes') {       
-                  ThunkableWebviewerExtension.postMessage(message);          
+                  ThunkableWebviewerExtension.postMessage(noti);          
                 } else if (event.action === 'No') {                 
                   alert("Thanks for your immediate reply");                
                 }}]); 
