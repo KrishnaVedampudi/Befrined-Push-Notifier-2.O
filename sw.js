@@ -25,6 +25,7 @@ function prompt()
             console.log(message);            
           }else{
             noti = message;
+            console.log(message);   
           sendMessage();           
           }
         });
