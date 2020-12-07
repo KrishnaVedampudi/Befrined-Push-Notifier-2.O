@@ -22,9 +22,10 @@ function prompt()
 }
  ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
-            console.log(message);
+            console.log(message);            
           }else{
-          sendMessage();
+            message = message;
+          sendMessage();           
           }
         });
    function sendMessage()
