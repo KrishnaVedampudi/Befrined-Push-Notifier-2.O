@@ -30,6 +30,7 @@ function prompt()
         });
    function sendMessage()
 {      
+  console.log(msg);
     OneSignal.setSubscription(true);      
                                                                                    
               web_buttons=[
