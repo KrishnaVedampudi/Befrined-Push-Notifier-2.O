@@ -64,6 +64,6 @@ function prompt()
               OneSignal.push(["addListenerForNotificationOpened", function(event) {       
                 if (event.action === 'Yes') {       
                   ThunkableWebviewerExtension.postMessage(noti);          
-                } else if (event.action === 'No') {                 
+                } else if (event.action === 'NO') {                 
                   alert("Thanks for your immediate reply");                
                 }}]); 
