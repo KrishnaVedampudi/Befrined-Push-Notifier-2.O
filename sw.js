@@ -61,7 +61,8 @@ function prompt()
                   .then(json => {
                      console.log(json);
                 });}
-              OneSignal.push(["addListenerForNotificationOpened", function(event) {       
+              OneSignal.push(["addListenerForNotificationOpened", function(event) {   
+                console.log('listener is working!')
                 if (event.action === 'Yes') {       
                   ThunkableWebviewerExtension.postMessage(noti);  
                   console.log('I am willing is clicked');
