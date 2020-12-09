@@ -62,11 +62,15 @@ function prompt()
                      console.log(json);
                 });}
               OneSignal.push(["addListenerForNotificationOpened", function(event) {   
-                console.log('listener is working!')
+                console.log('listener is working!');                
                 if (event.action === 'Yes') {       
                   ThunkableWebviewerExtension.postMessage(noti);  
                   console.log('I am willing is clicked');
-                } else if (event.action === 'NO') {                 
+                } else if (event.action === "")
+                {
+                  console.log('body is clicked');
+                }
+                else if (event.action === 'NO') {                 
                   alert("Thanks for your immediate reply");  
                   console.log('I am not willing is clicked');
                 }}]); 
