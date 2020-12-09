@@ -64,7 +64,7 @@ function prompt()
               OneSignal.push(["addListenerForNotificationOpened", function(event) {       
                 if (event.action === 'Yes') {       
                   ThunkableWebviewerExtension.postMessage(noti);  
-                  console.log('I am willing is clicked')
+                  console.log('I am willing is clicked');
                 } else if (event.action === 'NO') {                 
                   alert("Thanks for your immediate reply");  
                   console.log('I am not willing is clicked');
