@@ -37,11 +37,13 @@ function prompt()
               web_buttons=[
                {
                "id":"Yes",
-               "text":"I am willing" 
+               "text":"I am willing" ,
+                "url": "https://example.com/?_osp=do_not_open"
                },
                {
                  "id":"NO",
-                 "text":"I am not willing"
+                 "text":"I am not willing",
+                 "url": "https://example.com/?_osp=do_not_open"
                }]                 
               const body = {    
                "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
