@@ -64,19 +64,17 @@ function prompt()
                   .then(json => {
                      console.log(json);
                 });}
-OneSignal.push(function() {
-  OneSignal.on('notificationDisplay', function(event) {
-    console.log('OneSignal notification displayed:', event);
-     if (event.action === 'Yes') {       
-           ThunkableWebviewerExtension.postMessage(noti);  
-            console.log('I am willing is clicked');
-       } else if (event.action === "") {
-           ThunkableWebviewerExtension.postMessage(noti); 
-           console.log('body is clicked');    
-      }  else if (event.action === "No") {          
-           console.log('The user was not willing');  
-      } 
-   });
-});
+OneSignal.push(["addListenerForNotificationOpened", function(event) {
+  console.log("OneSignal notification clicked:", event); 
+ 
+    if (event.action === "") {
+     console.log('body is clicked');
+    } else if (event.action === 'Yes') {      
+      console.log('yes is clicked');
+    } else if (event.action === 'NO') { 
+      console.log('no is clicked')
+    }
+ 
+}]);
  
               
