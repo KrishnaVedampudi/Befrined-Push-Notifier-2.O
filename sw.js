@@ -62,14 +62,9 @@ function prompt()
                   .then(json => {
                      console.log(json);
                 });}
-OneSignal.push(["addListenerForNotificationOpened", function(error,event) {
+OneSignal.push(["addListenerForNotificationOpened", function(event) {
   console.log("OneSignal notification clicked:", event); 
- if(error)
- {
-   console.log(error);
- }  
-  else
-  {
+  
     if (event.action === "") {
      console.log('body is clicked');
      ThunkableWebviewerExtension.postMessage(noti);
@@ -79,7 +74,7 @@ OneSignal.push(["addListenerForNotificationOpened", function(error,event) {
     } else if (event.action === 'NO') { 
       console.log('no is clicked');
     } 
-  }
+  
 }]);
  
               
