@@ -81,10 +81,10 @@ OneSignal.sendSelfNotification(
   "OneSignal Web Push Notification",
   /* Message (defaults if unset) */
   "Action buttons increase the ways your users can interact with your notification.", 
-    
-  'https://www.example.com'
   
-  'https://obj.whitehatjr.com/7098897e-0efb-43b2-b8d5-00b9ab14b2a3.jpeg',
+  'http://i.imgur.com/N8SN8ZS.png',
+  
+  'https://example.com/?_osp=do_not_open',   
   
   {
     /* Additional data hash */
