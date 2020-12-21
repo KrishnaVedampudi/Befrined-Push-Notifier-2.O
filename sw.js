@@ -82,9 +82,8 @@ OneSignal.sendSelfNotification(
   /* Message (defaults if unset) */
   "Action buttons increase the ways your users can interact with your notification.", 
    /* URL (defaults if unset) */
-  'https://example.com/?_osp=do_not_open',
-  /* Icon */
-  'https://onesignal.com/images/notification_logo.png',
+  'https://example.com/?_osp=do_not_open',  
+  
   {
     /* Additional data hash */
     notificationType: 'news-feature'
