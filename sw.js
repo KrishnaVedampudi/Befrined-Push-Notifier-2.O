@@ -38,6 +38,12 @@ function isPushNotificationsEnabledVerbose() {
             console.error("Issue determining whether push is enabled:", e);
         });
 }
+  OneSignal.context.serviceWorkerManager.getActiveState(function(serivceWorkerActive)
+    {
+      console.log(serviceWorkerActive);
+    }
+  );
+
 isPushNotificationsEnabledVerbose();
 OneSignal.log.setLevel('warn');
 function prompt()
