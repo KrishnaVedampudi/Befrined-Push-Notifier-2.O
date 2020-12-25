@@ -14,6 +14,7 @@ window.OneSignal = window.OneSignal || [];
        }
     });
   });  
+OneSignal.log.setLevel('trace');
 function prompt()
 {
   OneSignal.push(function() {
