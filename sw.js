@@ -46,10 +46,10 @@ function prompt()
                  "url": "https://example.com/?_osp=do_not_open"
                }]                 
               const body = {    
-               "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
-               "channel_for_external_user_ids": "push",
-               "contents": {"en": "Hello, someone is waiting for you!!!! If you want to aceept the job request, click on I am willing"},                
-               "headings" : {"en": "A job request!"},               
+               "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",               
+               "contents": {"en": "Hello, someone is waiting for you!!!! If you want to aceept the job request, click on I am willing"},
+               "headings" : {"en": "A job request!"},
+               "channel_for_external_user_ids": "push",                            
                "include_external_user_ids":[noti],             
                "web_buttons": web_buttons
               }           
