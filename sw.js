@@ -14,7 +14,7 @@ window.OneSignal = window.OneSignal || [];
        }
     });
   });  
-OneSignal.log.setLevel('trace');
+OneSignal.log.setLevel('warn');
 function prompt()
 {
   OneSignal.push(function() {
