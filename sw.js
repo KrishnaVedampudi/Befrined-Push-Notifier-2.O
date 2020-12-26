@@ -49,9 +49,8 @@ function prompt()
                "app_id": "2e7a2add-017c-4365-8d3c-9ffe6b62582f",               
                "contents": {"en": "Hello, someone is waiting for you!!!! If you want to aceept the job request, click on I am willing"},
                "headings" : {"en": "A job request!"},
-               "data": {"foo":"bar"},
-               "channel_for_external_user_ids": "push",                            
-               "include_external_user_ids":[noti],             
+               "data": {"foo":"bar"},                                          
+               "include_player_ids":[noti],             
                "web_buttons": web_buttons
               }           
               fetch('https://onesignal.com/api/v1/notifications', {
