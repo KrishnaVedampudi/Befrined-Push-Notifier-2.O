@@ -34,7 +34,7 @@ OneSignal.push(function() {
     console.log('New permission state:', currentPermission);
     if(currentPermission == granted)
     {
-      ThunkableWebviewerExtension.postMessage('done')
+      ThunkableWebviewerExtension.postMessage('done');
     }
   });   
 });
