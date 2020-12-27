@@ -28,6 +28,16 @@ window.OneSignal = window.OneSignal || [];
        }
     });
   });
+OneSignal.push(function() {
+  OneSignal.on('notificationPermissionChange', function(permissionChange) {
+    var currentPermission = permissionChange.to;
+    console.log('New permission state:', currentPermission);
+    if(currentPermission == granted)
+    {
+      ThunkableWebviewerExtension.postMessage('done')
+    }
+  });   
+});
 function prompt()
 {
   OneSignal.push(function() {
