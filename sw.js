@@ -3,9 +3,23 @@ window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
-      notifyButton: {
-        enable: true,
-      },
+ promptOptions: {
+  customlink: {
+    enabled: true,
+    style: "button", 
+    size: "medium", 
+    color: {
+      button: '#E12D30', 
+      text: '#FFFFFF',
+    },
+    text: {
+      subscribe: "Recieve Job Requests from Customers", /* Prompt's text when not subscribed */
+      unsubscribe: "Unsubscribe from push notifications", 
+      explanation: "Hi, Please click Recieve job requests so that any customer will notify you if they need you", /* Optional text appearing before the prompt button */
+    },
+    unsubscribeEnabled: true,
+  }
+},
       subdomainName: "mk-mahikrish",
        welcomeNotification: {
       "title" :"A message from befriend O'bot",
