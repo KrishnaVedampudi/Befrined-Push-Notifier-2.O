@@ -38,12 +38,6 @@ OneSignal.push(function() {
     }
   });   
 });
-function prompt()
-{
-  OneSignal.push(function() {
-   OneSignal.showNativePrompt(); 
-  }); 
-}
  ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);            
