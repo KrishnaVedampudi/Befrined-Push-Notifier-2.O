@@ -27,8 +27,9 @@ OneSignal.push(function() {
 });
 function slidedown()
 {  
- OneSignal.push(function() {
-  OneSignal.showHttpPrompt();
+
+OneSignal.push(function() {
+  OneSignal.registerForPushNotifications();
 });
 }
 ThunkableWebviewerExtension.receiveMessage(function(message) {             
