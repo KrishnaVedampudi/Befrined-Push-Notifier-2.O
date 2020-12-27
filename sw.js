@@ -38,7 +38,13 @@ OneSignal.push(function() {
     }
   });   
 });
- ThunkableWebviewerExtension.receiveMessage(function(message) {             
+function slidedown()
+{
+  OneSignal.push(function() {
+  OneSignal.showSlidedownPrompt();
+});
+}
+ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);            
           }else{
