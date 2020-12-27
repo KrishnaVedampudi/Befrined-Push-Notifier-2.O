@@ -3,10 +3,9 @@ window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
-      notifyButton:
-      {
-        "enabled": "true"
-      }
+      notifyButton: {
+        enable: true,
+      },
 
       subdomainName: "mk-mahikrish",
        welcomeNotification: {
