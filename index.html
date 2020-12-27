@@ -20,16 +20,27 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="jumbotron">
-    <button class="btn btn-primary col-lg-12 col-sm-12 col-xs-12 col-md-12" onclick="prompt();" style="border-radius:15px; box-shadow:5px 5px 5px grey; padding:15px;">Click on this button to subscribe for notifications</button>
-   <br><br>
+  <div class="jumbotron">    
     <div class="container">
       <center>
-     <p class="col-lg-12 col-sm-12 col-xs-12 col-md-12 text-muted text-primary" style="padding:15px;">This is just for verification so this won't have any design but still will send notifications via messaging with my app</p>
+       <div style="background-color:cyan; border-radius:15px; box-shadow:5px 5px 5px grey; padding:15px;" class="onesignal-customlink-container">         
+       </div>
     </center>
         </div>
   </div>
-  
+   <style>
+    .onesignal-customlink-subscribe
+    {
+      background-color:orange;
+      color:white;
+    }
+    .onesignal-customlink-explanation
+    {
+      float:none;
+      margin-left:10%;
+    }
+    
+  </style>
   <script src="sw.js"></script>
 </body>
 </html>
