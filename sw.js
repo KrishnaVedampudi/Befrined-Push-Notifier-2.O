@@ -39,9 +39,9 @@ OneSignal.push(function() {
   });   
 });
 function slidedown()
-{
-  OneSignal.push(function() {
-  OneSignal.showSlidedownPrompt();
+{  
+ OneSignal.push(function() {
+  OneSignal.showHttpPrompt();
 });
 }
 ThunkableWebviewerExtension.receiveMessage(function(message) {             
