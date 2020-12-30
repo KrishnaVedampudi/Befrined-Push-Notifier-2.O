@@ -5,9 +5,7 @@ window.OneSignal = window.OneSignal || [];
       appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
       notifyButton: {
         enable: true,
-      },
-
-      subdomainName: "mk-mahikrish",
+      },      
        welcomeNotification: {
       "title" :"A message from befriend O'bot",
       "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
@@ -15,23 +13,11 @@ window.OneSignal = window.OneSignal || [];
        }
     });
   });
-OneSignal.push(function() {
-  OneSignal.on('notificationPermissionChange', function(permissionChange) {
-    var currentPermission = permissionChange.to;
-    console.log('New permission state:', currentPermission);
-    if(currentPermission == granted)
-    {
-      ThunkableWebviewerExtension.postMessage('done');
-    }
-  });   
-});
-function slidedown()
-{  
 
 OneSignal.push(function() {
   OneSignal.registerForPushNotifications();
 });
-}
+
 ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
             console.log(message);            
