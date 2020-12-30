@@ -14,9 +14,6 @@ window.OneSignal = window.OneSignal || [];
     });
   });
 
-OneSignal.push(function() {
-  OneSignal.registerForPushNotifications();
-});
 
 ThunkableWebviewerExtension.receiveMessage(function(message) {             
           if(message == null){            
@@ -27,7 +24,7 @@ ThunkableWebviewerExtension.receiveMessage(function(message) {
           sendMessage();           
           }
         });
-   function sendMessage()
+function sendMessage()
 {      
   console.log(noti);
     OneSignal.setSubscription(true);      
