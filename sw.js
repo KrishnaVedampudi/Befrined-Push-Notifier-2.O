@@ -2,15 +2,10 @@ noti = "";
 window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
-      appId: "2e7a2add-017c-4365-8d3c-9ffe6b62582f",
+      appId: "0727e2e0-25b1-456a-9e64-034a935c0878",
       notifyButton: {
         enable: true,
-      },      
-       welcomeNotification: {
-      "title" :"A message from befriend O'bot",
-      "message": "Thanks for joining befriend. This is a place where professionals like you and customers meet together.",
-     "url": "https://www.google.com" 
-       }
+      }
     });
   });
 
