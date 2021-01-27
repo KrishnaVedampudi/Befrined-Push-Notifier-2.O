@@ -1,13 +1,15 @@
 noti = "";
-window.OneSignal = window.OneSignal || [];
+
+  window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
       appId: "0727e2e0-25b1-456a-9e64-034a935c0878",
       notifyButton: {
         enable: true,
-      }
+      },
     });
   });
+
 
 
 ThunkableWebviewerExtension.receiveMessage(function(message)
