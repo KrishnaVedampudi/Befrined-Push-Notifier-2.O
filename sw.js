@@ -55,14 +55,12 @@ function sendMessage()
 OneSignal.push(["addListenerForNotificationOpened", function(event) {
   console.log("OneSignal notification clicked:", event); 
   
-    if (event.action === "") {
-     console.log('body is clicked');
+    if (event.action === "") {     
      ThunkableWebviewerExtension.postMessage(noti);
-    } else if (event.action === 'Yes') {      
-      console.log('yes is clicked');
+    } else if (event.action === 'Yes') {          
       ThunkableWebviewerExtension.postMessage(noti);
     } else if (event.action === 'NO') { 
-      console.log('no is clicked');
+      console.log("rejected");
     } 
   
 }]);
