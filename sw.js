@@ -24,8 +24,8 @@ function sendMessage()
                                                                                    
               web_buttons=[
                {
-               "id":"Yes",
-               "text":"I am willing" ,
+                "id":"YES",
+                "text":"I am willing" ,
                 "url": "https://example.com/?_osp=do_not_open"
                },
                {
@@ -39,7 +39,7 @@ function sendMessage()
                "headings" : {"en": "A job request!"},
                "data": {"foo":"bar"},                                          
                "include_player_ids":[noti],             
-               "web_buttons": web_buttons
+               "buttons": web_buttons
               }           
               fetch('https://onesignal.com/api/v1/notifications', {
                      method: 'POST',
