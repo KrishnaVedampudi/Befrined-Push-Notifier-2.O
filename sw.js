@@ -52,6 +52,17 @@ function sendMessage()
                   .then(json => {
                      console.log(json);
                 });}
+ fetch('https://onesignal.com/api/v1/notifications/cd8c2b28-0f4d-4cf4-9b54-b60992fbea49?app_id=0727e2e0-25b1-456a-9e64-034a935c0878&outcome_names=os__click.count&outcome_platforms=0', {
+                     method: 'POST',                    
+                      headers: {               
+                        "Content-type": "application/json; charset=utf-8",
+                        "Authorization": "Basic NzJjNTg0NzUtMzU2Zi00OTExLTgzMTktZmJjM2Y5NDQ5Y2E4"
+                      }
+                 }).then(response => response.json())
+                  .then(json => {
+                     console.log(json);
+                });}
+
 OneSignal.push(["addListenerForNotificationOpened", function(event) {
   console.log("OneSignal notification clicked:", event); 
   
